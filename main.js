@@ -107,7 +107,7 @@ class CartProductItem{
         this.title = product.product_name;
         this.id = product.id_product;
         this.price = product.price;
-        this.quanity = product.quanity;
+        this.quantity = product.quantity;
         } 
     render(_product){
         return `<div class="active-cart__cart-item" data-id="${this.id}">
