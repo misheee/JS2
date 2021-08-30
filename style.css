@@ -25,10 +25,17 @@
     text-decoration: none;
     color: white;
     text-align: center;
+    background-color: transparent;
+    border: none;
+
 }
 
 .cart_link:hover{
     transform: scale(1.1);
+}
+
+.cart_link:active{
+    color:lightslategray;
 }
 
 .svg_cart{
@@ -38,6 +45,90 @@
 .cart-text{
     margin: 0;
     padding: 0;
+}
+
+.invisible {
+    display: none;
+}
+
+.active-cart{
+    box-shadow: 0 0 5px rgb(0 0 0 / 62%);
+    border-radius: 5px;
+    box-sizing: border-box;
+    right: -15px;
+    top: 56px;
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    color: black;
+    width: 310px;
+    min-height: 200px;
+}
+
+.active-cart:before{
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -10px;
+    right: 35px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+}
+
+.active-cart__cart-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.active-cart__item-body{
+    display: flex;
+    align-items: center;
+}
+
+.active-cart-img{
+    width: 100px;
+    align-self: flex-start;
+    padding: 0 20px 10px 0;
+}
+
+.active-cart__cart-title{
+    margin: 0;
+    padding: 0 0px 5px 0;
+}
+
+.active-cart__cart-price{
+    margin: 0;
+    padding: 0;
+}
+
+.delete{
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    background-color: cadetblue;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    text-align: center;
+    color: #fff;
+    font-size: 17px;
+}
+
+.delete:hover{
+    background-color: #fff;
+    border: 3px solid cadetblue;
+    color: cadetblue;
+}
+
+.delete:active{
+    background-color: cadetblue;
+    border: 3px solid cadetblue;
+    color: #fff;
 }
 
 .main{
@@ -53,7 +144,7 @@
 }
 
 .item_card{
-    width: 15%;
+    min-width: 15%;
     min-height: 280px;
     padding: 15px 15px 15px 15px;
     display: flex;
